@@ -1,0 +1,29 @@
+<div class="">
+  <div class="rounded-full bg-red-200 p-3 w-16 h-16 flex justify-center items-center  ">
+    <span class="icon-help-circle text-3xl"></span>
+  </div>
+  <h3 class="dark:text-white text-black text-xl">الغاء موعد الاختبار</h3>
+  <h3 class="dark:text-white text-black text-xl">
+    هل انت متاخد انك تريد اللغاء موعد "{{ data.appointmentDealis.title }} ({{
+      data.appointmentDealis.testType
+    }})"
+  </h3>
+  <div class="flex mt-8">
+    <div class="w-[50%]">
+      <button
+        (click)="action()"
+        class="cursor-pointer font-bold text-xl rounded-md border-none text-white bg-red-500 border-red-500 w-[90%] h-10"
+      >
+        نعم اللغاء الطلب
+      </button>
+    </div>
+    <div class="w-[50%]">
+      <button
+        (click)="cancel()"
+        class="cursor-pointer font-bold text-xl rounded-md dark:text-white text-black dark:bg-slate-400 border-none bg-[#80808019] w-[90%] h-10"
+      >
+        تجاهل
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+
+::ng-deep{
+  .p-dropdown{
+    border: none;
+    margin-inline-end: 1rem;
+  }
+  .dark .p-dropdown{
+    background-color: transparent;
+    color: #fff;
+  }
+  .dark .p-dropdown .p-dropdown-label.p-placeholder {
+    color: white;
+  }
+  .dark .p-dropdown .p-dropdown-trigger{
+    color: white;
+  }
+}

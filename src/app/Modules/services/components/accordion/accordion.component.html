@@ -1,0 +1,154 @@
+<div class="accordion_container bg-white dark:bg-black rounded-[2rem]">
+  <div class="accordion_content bg-white dark:bg-black p-5 rounded-[1rem]">
+    <p-accordion
+      dir="ltr"
+      class="w-full"
+      expandIcon="pi pi-plus"
+      collapseIcon="pi pi-minus"
+      [activeIndex]="0"
+    >
+      <p-accordionTab>
+        <ng-template pTemplate="header">
+          <span class="flex align-items-center justify-end gap-2 w-full">
+            <span class="font-bold  dark:text-white">
+              بيانات المتقدم
+            </span>
+            <span class="dark:text-white icon-user-group text-md text-black"></span>
+          </span>
+        </ng-template>
+        <div class="w-full">
+          <div
+            class="container_content w-full justify-center items-center flex flex-wrap flex-row-reverse"
+          >
+            <div class="w-[100%] sm:w-[32%] sm:mt-0 mt-2 flex justify-between">
+              <div class="w-[50%] text-center">
+                <p class="text-[0.8rem] sm:text-[1rem] text-gray-500 h-7">
+                  وقت التسجيل
+                </p>
+                <p
+                  class="dark:text-white text-[0.8rem] sm:text-[1rem] font-bold"
+                >
+                  {{ appoointmentDetalis.date }}
+                </p>
+              </div>
+
+              <div class="w-[50%] text-center">
+                <p class="text-[0.8rem] sm:text-[1rem] text-gray-500 h-7">
+                  حاله التسجيل
+                </p>
+                @if(appoointmentDetalis.status == '1'){
+                <p class="text-[0.8rem] text-center sm:text-[1rem] font-bold">
+                  مؤكد
+                </p>
+                }@else {
+                <p class="text-[0.8rem] text-center sm:text-[1rem] font-bold">
+                  غير مؤكد
+                </p>
+                }
+              </div>
+            </div>
+            <div class="w-[100%] sm:w-[32%] flex justify-between">
+              <div class="w-[50%] text-center">
+                <p class="text-[0.8rem] sm:text-[1rem] text-gray-500 h-7">
+                  رقم الهويه
+                </p>
+                <p
+                  class="dark:text-white text-[0.8rem] sm:text-[1rem] font-bold"
+                >
+                  {{ appoointmentDetalis.prsonalId }}
+                </p>
+              </div>
+
+              <div class="w-[50%] text-center">
+                <p class="text-[0.8rem] sm:text-[1rem] text-gray-500 h-7">
+                  الرقم موعد الاختبار
+                </p>
+                <p
+                  class="dark:text-white text-[0.8rem] sm:text-[1rem] font-bold"
+                >
+                  {{ appoointmentDetalis.ReferenceNumber }}
+                </p>
+              </div>
+            </div>
+            <div class="w-[100%] sm:w-[32%] flex justify-between">
+              <div class="w-[50%] text-center">
+                <p class="text-[0.8rem] sm:text-[1rem] text-gray-500 h-7">
+                  الاسم بالعربى
+                </p>
+                <p
+                  class="dark:text-white text-[0.8rem] sm:text-[1rem] font-bold"
+                >
+                  {{ appoointmentDetalis.arName }}
+                </p>
+              </div>
+
+              <div class="w-[50%] text-center">
+                <p class="text-[0.8rem] sm:text-[1rem] text-gray-500 h-7">
+                  الاسم الانجليزى
+                </p>
+                <p
+                  class="dark:text-white text-[0.8rem] sm:text-[1rem] font-bold"
+                >
+                  {{ appoointmentDetalis.enName }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </p-accordionTab>
+      <p-accordionTab>
+        <ng-template pTemplate="header">
+          <span class="flex align-items-center justify-end gap-2 w-full">
+            <span class="font-bold text-black dark:text-white text-xl">
+              فاتوره السداد
+            </span>
+            <span class="dark:text-white icon-invoice-01 text-lg text-black"></span>
+          </span>
+        </ng-template>
+        <p class="m-0">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium...
+        </p>
+      </p-accordionTab>
+      <p-accordionTab>
+        <ng-template pTemplate="header">
+          <span class="flex align-items-center justify-end gap-2 w-full">
+            <span class="font-bold text-black dark:text-white">
+              مقر الاختبار
+            </span>
+            <span class="icon-location dark:text-white text-black text-md"></span>
+          </span>
+        </ng-template>
+        <p class="m-0">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium...
+        </p>
+      </p-accordionTab>
+      <p-accordionTab>
+        <ng-template pTemplate="header">
+          <span class="flex align-items-center justify-end gap-2 w-full">
+            <span class="font-bold text-black dark:text-white">
+              معلومات عامه
+            </span>
+            <span class="dark:text-white icon-information-circle"></span>
+          </span>
+        </ng-template>
+        <p class="m-0">At vero eos et accusamus et iusto odio dignissimos...</p>
+      </p-accordionTab>
+      <p-accordionTab>
+        <ng-template pTemplate="header">
+          <span class="flex align-items-center justify-end gap-2 w-full">
+            <span class="font-bold text-black dark:text-white">
+              ملاحظات اخرى
+            </span>
+            <span class="dark:text-white   icon-message-question
+
+            "></span>
+          </span>
+        </ng-template>
+        <p class="m-0">At vero eos et accusamus et iusto odio dignissimos...</p>
+      </p-accordionTab>
+
+    </p-accordion>
+  </div>
+</div>

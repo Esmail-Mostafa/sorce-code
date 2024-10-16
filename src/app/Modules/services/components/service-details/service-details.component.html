@@ -1,0 +1,130 @@
+<section class="service_details_container px-4 mt-16 sm:px-10">
+  <!-- test info -->
+  <div
+    class="details_container bg-white dark:bg-black p-2 sm:p-6 rounded-xl mb-4"
+  >
+    <div class="content-detalis_container flex justify-between flex-wrap">
+      <!-- test time -->
+      <div>
+        <!-- title  -->
+
+        <h3 class="leading-none text-xl text-black dark:text-white">
+          {{ appointmentsDetalis.title }}
+        </h3>
+        <span
+          class="text-gray-500 dark:text-white font-medium mb-2 p-0 text-md leading-none"
+        >
+          <span class="me-1.5 dark:text-white icon-calendar"></span>
+          {{ appointmentsDetalis.date }}</span
+        >
+        <span
+          class="text-gray-500 dark:text-white font-medium mb-4 p-0 text-md leading-none ms-6"
+        >
+          <span class="me-1.5 dark:text-white icon-clock"></span
+          >{{ appointmentsDetalis.timeTest }}-{{ appointmentsDetalis.to }}
+          <span>-</span> {{ appointmentsDetalis.timeTest
+          }}{{ appointmentsDetalis.form }}</span
+        >
+        <div class="mt-3">
+          @if(appointmentsDetalis.status == '1'){
+          <span
+            class="border-1 px-2 py-1 border-green-300 bg-green-100 rounded-md text-green-600 font-thin"
+            >مؤكد</span
+          >
+          }@else {
+          <span
+            class="border-1 px-2 py-1 border-yellow-300 bg-yeborder-yellow-100 rounded-md text-yeborder-yellow-600 font-thin"
+            >مؤكد</span
+          >
+          }
+
+          <span
+            class="border-1 px-2 py-1 border-blue-300 bg-blue-100 ms-2 rounded-md text-blue-600 font-thin"
+            >متبقى {{ appointmentsDetalis.remainingTime }} ايام</span
+          >
+        </div>
+      </div>
+
+      <!-- cancel button -->
+      <div>
+        <button
+          (click)="show()"
+          class="border-2 sm:mt-0 mt-6 bg-white dark:bg-black text-[0.8rem] rounded-md shadow-none text-red-600 font-bold px-3 py-3 border-red-400"
+        >
+          الغاء موعد الاختبار
+        </button>
+      </div>
+    </div>
+    <hr class="bg-gray-300 h-[1.5px] border-none font-bold rounded-md mt-5" />
+
+    <div
+      class="container_content w-full justify-center items-center flex flex-wrap"
+    >
+      <div class="w-[100%] sm:w-[32%] sm:mt-0 mt-2 flex justify-between">
+        <div class="w-[50%] text-center">
+          <p class="text-[0.8rem] sm:text-[1rem] text-gray-500 h-7">
+            <span class="icon-grid dark:text-white"></span> الرقم المرجعى للموعد
+          </p>
+          <p class="dark:text-white text-[0.8rem] sm:text-[1rem] font-bold">
+            {{ appointmentsDetalis.ReferenceNumber }}
+          </p>
+        </div>
+
+        <div class="w-[50%] text-center">
+          <p class="text-[0.8rem] sm:text-[1rem] text-gray-500 h-7">
+            <span class="icon-dollar-circle dark:text-white"></span> المقابل
+            المادى
+          </p>
+          <p
+            class="dark:text-white text-[0.8rem] text-center sm:text-[1rem] font-bold"
+          >
+            {{ appointmentsDetalis.price }}
+          </p>
+        </div>
+      </div>
+      <div class="w-[100%] sm:w-[32%] flex justify-between">
+        <div class="w-[50%] text-center">
+          <p class="text-[0.8rem] sm:text-[1rem] text-gray-500 h-7">
+            <span class="icon-clock mx-1 dark:text-white"></span>مده الاختبار
+          </p>
+          <p class="dark:text-white text-[0.8rem] sm:text-[1rem] font-bold">
+            {{ appointmentsDetalis.testTimeHoures }}
+          </p>
+        </div>
+
+        <div class="w-[50%] text-center">
+          <p class="text-[0.8rem] sm:text-[1rem] text-gray-500 h-7">
+            <span class="icon-grid-view dark:text-white"></span> اليه الاختبار
+          </p>
+          <p class="dark:text-white text-[0.8rem] sm:text-[1rem] font-bold">
+            {{ appointmentsDetalis.testType }}
+          </p>
+        </div>
+      </div>
+      <div class="w-[100%] sm:w-[32%] flex justify-between">
+        <div class="w-[50%] text-center">
+          <p class="text-[0.8rem] sm:text-[1rem] text-gray-500 h-7">
+            <span class="icon-language-circle dark:text-white"></span> لغه
+            الاختبار
+          </p>
+          <p class="dark:text-white text-[0.8rem] sm:text-[1rem] font-bold">
+            {{ appointmentsDetalis.testLang }}
+          </p>
+        </div>
+
+        <div class="w-[50%] text-center">
+          <p class="text-[0.8rem] sm:text-[1rem] text-gray-500 h-7">
+            <span class="icon-user-group dark:text-white"></span> الفئه
+            المستهدفه
+          </p>
+          <p class="dark:text-white text-[0.8rem] sm:text-[1rem] font-bold">
+            {{ appointmentsDetalis.peapleTarget }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- accordion -->
+  <app-accordion [appoointmentDetalis]="appointmentsDetalis"></app-accordion>
+</section>

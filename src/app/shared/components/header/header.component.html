@@ -1,0 +1,106 @@
+<nav class="px-8">
+  <div
+    class="flex justify-between items-center bg-white dark:bg-slate-950 mt-7 px-8 header_container h-16 rounded-xl relative"
+  >
+    <div class="sm:flex hidden">
+      @for (item of Breadcrumb; track Breadcrumb.url ; let last = $last) { @if
+      (!last) {
+      <a
+        routerLink="{{ item.url }}"
+        class="text-gray-500 dark:text-white no-underline"
+        >{{ item.label }}</a
+      >
+      <span class="text-gray-500 dark:text-white mx-2 pi pi-angle-left"> </span>
+
+      }@else {
+      <a
+        routerLink="{{ item.url }}"
+        class="text-gray-300 dark:text-white no-underline"
+        >{{ item.label }}</a
+      >
+
+      } }
+    </div>
+    <!-- lang dropdown -->
+    <div class="hidden items-center sm:flex">
+      <div class="lang_container flex items-center">
+        <span class="icon-world  text-lg  dark:text-white text-black mt-1 "></span>
+
+        <p-dropdown
+          [options]="lang"
+          [(ngModel)]="selectedlang"
+          optionLabel="name"
+          optionValue="code"
+          placeholder="عربى"
+        />
+      </div>
+      <!-- user icon -->
+      <span class="icon-bell me-4 text-lg dark:bg-slate-800 bg-slate-100 dark:text-white rounded-md px-2 py-1"></span>
+      <div
+        class="user bg-green-600 h-9 w-9 rounded-full flex justify-center items-center me-3"
+      >
+        <p class="text-white">َض</p>
+      </div>
+
+      <div>
+        @if (darkModeValue()) {
+        <button
+          (click)="lightMode()"
+          class="pi pi-sun bg-transparent border-none text-yellow-100"
+        ></button>
+
+        }@else{
+        <button
+          (click)="darkMode()"
+          class="pi pi-moon bg-transparent border-none"
+        ></button>
+        }
+      </div>
+    </div>
+    <!-- responseive menu -->
+    <button
+      (click)="displayMenu()"
+      class="pi pi-ellipsis-v sm:hidden block absolute left-5 bg-transparent border-none dark:text-white text-black"
+    ></button>
+    @if(displayResponseiveMenu){
+    <div
+      class="bg-white dark:bg-stone-950 rounded-md absolute left-0 top-[100%] flex sm:hidden"
+    >
+      <ul class="list-none">
+        <li class="mb-2">
+          <div>
+            @if (darkModeValue()) {
+            <button
+              (click)="lightMode()"
+              class="pi pi-sun bg-transparent border-none text-yellow-100"
+            ></button>
+
+            }@else{
+            <button
+              (click)="darkMode()"
+              class="pi pi-moon bg-transparent border-none"
+            ></button>
+            }
+          </div>
+        </li>
+        <li class="mb-2">
+          <p-dropdown
+            [options]="lang"
+            [(ngModel)]="selectedlang"
+            optionLabel="name"
+            optionValue="code"
+            placeholder="عربى"
+          />
+        </li>
+        <li class="mb-2">
+          <div
+            class="user bg-green-600 h-8 w-8 rounded-full flex justify-center items-center"
+          >
+            <p class="text-white">َض</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    }
+  </div>
+</nav>

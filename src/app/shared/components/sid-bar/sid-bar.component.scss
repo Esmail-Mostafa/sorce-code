@@ -1,0 +1,13 @@
+.active{
+  font-weight: bold;
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 229 228 / var(--tw-bg-opacity))
+
+}
+ .dark .active{
+  font-weight: bold;
+  --tw-bg-opacity: 1;
+  background-color: green
+
+
+}

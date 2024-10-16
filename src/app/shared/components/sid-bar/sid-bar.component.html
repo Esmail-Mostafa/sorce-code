@@ -1,0 +1,77 @@
+<div class="p-6 sm:p-8 bg-white dark:bg-slate-950 h-full relative sm:w-full w-5">
+  <!-- logo -->
+  <div class="flex justify-center">
+    <img
+      class="w-full dark:hidden block "
+      src="assets/Logo_files/Logo_Colored.png"
+      alt=""
+      srcset=""
+    />
+    <img
+      class="w-full dark:block hidden "
+      src="assets/Logo_files/Logo_White.png"
+      alt=""
+      srcset=""
+    />
+    <!-- sm logo -->
+
+    @if(darkMode) {
+    <img
+      class="w-8 justify-center dark:hidden sm:hidden block"
+      src="assets/Logo_files/Logo_White_sm.png"
+      alt=""
+      srcset=""
+    />
+    }@else {
+    <img
+      class="w-8 justify-center  dark:block sm:hidden block"
+      src="assets//Logo_files/Logo_Colored_sm.png"
+      alt=""
+      srcset=""
+    />
+    }
+  </div>
+
+  <!-- compoenets routing -->
+  <div class="mt-16">
+    <a
+      routerLink="home"
+      routerLinkActive="dark:bg-slate-600   bg-stone-200"
+      class="text-[1rem] dark:hover:bg-slate-600 h-12 mb-1 no-underline font-normal text-black dark:text-white hover:font-bold hover:bg-stone-200 w-[100%] py-0 px-0 sm:py-2 sm:px-4 rounded-md flex items-center justify-start"
+    >
+      <span class="me-2 icon-home dark:text-white text-black"> </span>
+      <span class="sm:flex hidden">الرئسيه</span>
+    </a>
+    <a
+      routerLink="/service"
+      routerLinkActive="dark:bg-slate-600   bg-stone-200"
+      class="text-[1rem] dark:hover:bg-slate-600 h-12 mb-1 no-underline font-normal text-black dark:text-white hover:font-bold hover:bg-stone-200 w-[100%] py-0 px-0 sm:py-2 sm:px-4 rounded-md flex items-center justify-start"
+    >
+    <span class="me-2 icon-services dark:text-white text-black"> </span>
+
+      <span class="sm:flex hidden">الخدمات</span>
+    </a>
+    <a
+      routerLink="/time"
+      routerLinkActive="dark:bg-slate-600   bg-stone-200"
+      class="text-[1rem] dark:hover:bg-slate-600 h-12 mb-1 no-underline font-normal text-black dark:text-white hover:font-bold hover:bg-stone-200 w-[100%] py-0 px-0 sm:py-2 sm:px-4 rounded-md flex items-center justify-start"
+    >
+    <span class="me-2 icon-clock-2 dark:text-white text-black"> </span>
+      <span class="sm:flex hidden">مواعيد</span>
+    </a>
+    <a
+      routerLink="more"
+      routerLinkActive="dark:bg-slate-600   bg-stone-200"
+      class="text-[1rem] dark:hover:bg-slate-600 h-12 mb-1 no-underline font-normal text-black dark:text-white hover:font-bold hover:bg-stone-200 w-[100%] py-0 px-0 sm:py-2 sm:px-4 rounded-md flex items-center justify-start"
+    >
+    <span class="me-2 icon-more dark:text-white text-black"> </span>
+      <span class="sm:flex hidden">المزيد</span>
+    </a>
+  </div>
+  <div class="absolute bottom-1/4">
+    <a class="text-red-600 flex">
+      <span class="text-red-600 sm:flex hidden"> تسجيل الخروج</span>
+      <span class="text-red-600 sm:ms-3 ms-0 icon-logout"></span>
+    </a>
+  </div>
+</div>
